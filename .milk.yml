@@ -6,7 +6,9 @@ changelog: "https://release-monitoring.org/api/v2/projects/?name=archimatetool"
 changelog_format: json
 
 # Regex for Version
-version: "{{ register_changelog.json['items'][0].version }}"
+version: "{{ register_changelog.json['items'][0].version
+             if register_changelog.json['items'][0].version.split('.') | length <= 3
+             else register_changelog.json['items'][0].version + '.0' }}"
 
 # Download URL
 url: "https://www.archimatetool.com/downloads/archi/{{ version }}/Archi-Win64-Setup-{{ version }}.exe"
