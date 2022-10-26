@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>archi</id>
-    <version>0.0</version>
+    <version>4.10.0</version>
     <title>Archi, The Free ArchiMate Modelling Tool</title>
     <authors>PhillipBeauvoir</authors>
     <owners>ITIGO AG, sbaerlocher, jlruizmlg</owners>
@@ -11,7 +11,18 @@
     <projectSourceUrl>https://github.com/archimatetool/archi</projectSourceUrl>
     <iconUrl>https://github.com/open-circle-ltd/chocolatey.archi@master/icon/archi.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The Archi® modelling tool is targeted toward all levels of Enterprise Architects and Modellers. It provides a low cost to entry solution to users who may be making their first steps in the ArchiMate modelling language, or who are looking for a free, cross-platform ArchiMate modelling tool for their company or institution and wish to engage with the language within a TOGAF® or other Enterprise Architecture framework. The application will be installed in "C:\Program Files (x86)\Archi".</description>
+    <description>The Archi® modelling tool is targeted toward all levels of Enterprise Architects and Modellers. It provides a low cost to entry solution to users who may be making their first steps in the ArchiMate modelling language, or who are looking for a free, cross-platform ArchiMate modelling tool for their company or institution and wish to engage with the language within a TOGAF® or other Enterprise Architecture framework. The application will be installed in "C:\Program Files (x86)\Archi".
+
+## Installation
+
+Installation without parameters.
+
+```ps1
+ choco install archi
+```
+
+## Disclaimer
+</description>
     <summary>A free and open source modelling tool to create ArchiMate models and sketches. Used by hundreds of Enterprise Architects throughout the world.</summary>
     <releaseNotes>ArchiMate 3.0 support new and changed concepts, relationships to relationships, metamodel, many changes and fixes</releaseNotes>
     <copyright>Copyright (c) 2013-2017 Phillip Beauvoir</copyright>
@@ -21,6 +32,6 @@
     <bugTrackerUrl>https://github.com/archimatetool/archi/issues</bugTrackerUrl>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools/**" target="tools"/>
   </files>
 </package>
