@@ -2,10 +2,10 @@ $ErrorActionPreference = 'Stop';
 $PackageParameters = Get-PackageParameters
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$urlPackage = 'https://www.archimatetool.com/downloads/download.php?/4.10.0/Archi-Win64-Setup-4.10.0.exe'
-$checksumPackage = '2dd1c81d94cd51ca5ba33d004cf9ac54586b1e77905f29c8c59d7914b09507a56cc69cdd329b5fafe5ea68cca510415bded13e7356d1ec83f727b29d8cc40ef8'
-$urlPackage64 = 'https://www.archimatetool.com/downloads/download.php?/4.10.0/Archi-Win64-Setup-4.10.0.exe'
-$checksumPackage64 = '2dd1c81d94cd51ca5ba33d004cf9ac54586b1e77905f29c8c59d7914b09507a56cc69cdd329b5fafe5ea68cca510415bded13e7356d1ec83f727b29d8cc40ef8'
+$urlPackage = 'https://www.archimatetool.com/downloads/archi.php?/5.0.0/Archi-Win64-Setup-5.0.0.exe'
+$checksumPackage = '68f4e10287e6e86df492acb38d76914ccce54a93ff5280816771cc5be8c80d90378484a2fd30dd715083d388d7d8a63a2436aa780f9ca4ca7d678ee75c713524'
+$urlPackage64 = 'https://www.archimatetool.com/downloads/archi.php?/5.0.0/Archi-Win64-Setup-5.0.0.exe'
+$checksumPackage64 = '68f4e10287e6e86df492acb38d76914ccce54a93ff5280816771cc5be8c80d90378484a2fd30dd715083d388d7d8a63a2436aa780f9ca4ca7d678ee75c713524'
 
 
 $packageArgs = @{

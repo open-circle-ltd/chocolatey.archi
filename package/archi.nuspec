@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>archi</id>
-    <version>4.10.0</version>
+    <version>5.0.0</version>
     <title>Archi, The Free ArchiMate Modelling Tool</title>
     <authors>PhillipBeauvoir</authors>
     <owners>Open Circle AG, sbaerlocher, jlruizmlg</owners>
