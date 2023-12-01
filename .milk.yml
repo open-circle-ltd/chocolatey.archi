@@ -6,10 +6,10 @@ changelog: "https://release-monitoring.org/api/v2/versions/?project_id=325924"
 changelog_format: json
 
 # Get Version
-version: "5.2.0.1"
+version: "{{ register_changelog.json['stable_versions'][0] }}"
 
 # Download URL
-url: "https://www.archimatetool.com/downloads/archi_5.php?/5.2.0/Archi-Win64-Setup-5.2.0.exe"
+url: "https://www.archimatetool.com/downloads/archi_5.php?/{{ version }}/Archi-Win64-Setup-{{ version }}.exe"
 
 searchreplace:
   "tools/chocolateyinstall.ps1":
