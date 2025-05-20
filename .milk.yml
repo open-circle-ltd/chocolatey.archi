@@ -7,9 +7,11 @@ changelog_format: json
 
 # Get Version
 version: "{{ register_changelog.json['stable_versions'][0] }}"
+# Scrap trailing number
+version_short: "{{ version | regex_replace('^([0-9]+\\.[0-9]+)\\..*$', '\\1') }}"
 
 # Download URL
-url: "https://www.archimatetool.com/downloads/archi-5.php?/{{ version }}/Archi-Win64-Setup-{{ version }}.exe"
+url: "https://www.archimatetool.com/downloads/archi/{{ version_short }}/Archi-Win64-Setup-{{ version }}.exe"
 
 searchreplace:
   "tools/chocolateyinstall.ps1":
