@@ -7,9 +7,10 @@ changelog_format: json
 
 # Get Version
 version: "{{ register_changelog.json['stable_versions'][0] }}"
+version_short: "{{ version | replace('.', '') }}"
 
 # Download URL
-url: "https://www.archimatetool.com/downloads/archi/{{ version }}/Archi-Win64-Setup-{{ version }}.exe"
+url: "https://www.github.com/archimatetool/archi.io/releases/download/{{ version_short }}/Archi-Win64-Setup-{{ version }}.exe"
 
 searchreplace:
   "tools/chocolateyinstall.ps1":
@@ -17,10 +18,6 @@ searchreplace:
       replace: "$urlPackage = '{{ url }}'"
     - regwxp: (^\s*[$]*checksumPackage\s*=\s*)('.*')
       replace: "$checksumPackage = '{{ file_hash }}'"
-    - regwxp: (^\s*[$]*urlPackage64\s*=\s*)('.*')
-      replace: "$urlPackage64 = '{{ url }}'"
-    - regwxp: (^\s*[$]*checksumPackage64\s*=\s*)('.*')
-      replace: "$checksumPackage64 = '{{ file_hash }}'"
 
 # readme to description
 readme:
@@ -32,9 +29,6 @@ deploy:
   - provider: chocolatey
     repository: "https://push.chocolatey.org/"
     key: "{{ lookup('env','CHOCOLATEY_ORG_API_KEY') }}"
-  - provider: chocolatey
-    repository: "https://nuget.itigo.tech/upload"
-    key: "{{ lookup('env','CHOCOLATEY_ITIGO_API_KEY') }}"
   - provider: github
     name: "OpenCircle-Choco-Bot"
     email: "chocomilk@open-circle.ch"
