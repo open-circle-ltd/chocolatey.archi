@@ -10,7 +10,7 @@ version: "{{ register_changelog.json['stable_versions'][0] }}"
 version_short: "{{ version | replace('.', '') }}"
 
 # Download URL
-url: "https://www.github.com/archimatetool/archi.io/releases/download/{{ version_short }}/Archi-Win64-Setup-{{ version }}.exe"
+url: "https://www.github.com/archimatetool/archi.io/releases/download/{{ version }}/Archi-Win64-Setup-{{ version }}.exe"
 
 searchreplace:
   "tools/chocolateyinstall.ps1":
