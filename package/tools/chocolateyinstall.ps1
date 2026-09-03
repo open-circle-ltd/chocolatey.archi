@@ -2,8 +2,8 @@ $ErrorActionPreference = 'Stop';
 $PackageParameters = Get-PackageParameters
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$urlPackage = 'https://github.com/archimatetool/archi.io/releases/download/5.9.0/Archi-Win64-Setup-5.9.0.exe'
-$checksumPackage = '10e26de702b5fce315a8a3b88009035dd6d79a716d07ddf5ab5ce7fd4dfc92772537d1a34951ef0574d51e22bf56aa3f1de74e2de59c0a1c3c3eb41c94cf69da'
+$urlPackage = 'https://www.github.com/archimatetool/archi.io/releases/download/5.10.0/Archi-Win64-Setup-5.10.0.exe'
+$checksumPackage = 'dba897f3aa2e1b6c30c48740cd5034e2ec502e86ee933f221b8e9e4253cfcba39c2e452a9b8caafeb0690b2abc58b25d518a0e2a1786079d1a20542e8acd4a22'
 
 
 $packageArgs = @{
